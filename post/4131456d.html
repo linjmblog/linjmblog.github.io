@@ -1,0 +1,165 @@
+<!DOCTYPE html><html lang="zh-Hans" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>jQuery笔记 | 总铭博客</title><meta name="keywords" content="播客"><meta name="author" content="总铭于心"><meta name="copyright" content="总铭于心"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="基本使用 先到jQuery官网复制.js代码  到目录下粘贴生成.jQuery.min.js文件  将需要使用的.html文件导入js文件 1&lt;script src&#x3D;&quot;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;  调用 1234567891011&lt;script&gt;    &#x2F;&#x2F; $(&amp;#x27;div&amp;#x27;).hide()；    &#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery笔记">
+<meta property="og:url" content="http://example.com/post/4131456d.html">
+<meta property="og:site_name" content="总铭博客">
+<meta property="og:description" content="基本使用 先到jQuery官网复制.js代码  到目录下粘贴生成.jQuery.min.js文件  将需要使用的.html文件导入js文件 1&lt;script src&#x3D;&quot;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;  调用 1234567891011&lt;script&gt;    &#x2F;&#x2F; $(&amp;#x27;div&amp;#x27;).hide()；    &#x2F;">
+<meta property="og:locale">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg2.png">
+<meta property="article:published_time" content="2022-10-24T02:56:04.000Z">
+<meta property="article:modified_time" content="2022-10-24T02:56:48.678Z">
+<meta property="article:author" content="总铭于心">
+<meta property="article:tag" content="播客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg2.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/post/4131456d"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'jQuery笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-10-24 10:56:48'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg2.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">总铭博客</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">jQuery笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-10-24T02:56:04.000Z" title="Created 2022-10-24 10:56:04">2022-10-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-10-24T02:56:48.678Z" title="Updated 2022-10-24 10:56:48">2022-10-24</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="jQuery笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><ol>
+<li><p>先到jQuery官网复制.js代码</p>
+</li>
+<li><p>到目录下粘贴生成.jQuery.min.js文件</p>
+</li>
+<li><p>将需要使用的.html文件导入js文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>调用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    // $(&#x27;div&#x27;).hide()；</span><br><span class="line">    // 1.等着页面DOM加载完毕再去执行js 代码</span><br><span class="line">    // $(document).ready(function() &#123;</span><br><span class="line">    //     $(&#x27;div&#x27;).hide();</span><br><span class="line">    // &#125;)</span><br><span class="line">    // 2.等着页面DOM加载完毕再去执行js 代码（简化版）</span><br><span class="line">    $(function() &#123;</span><br><span class="line">        $(&#x27;div&#x27;).hide();</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h3 id="jQuery对象与DOM对象之间的转换"><a href="#jQuery对象与DOM对象之间的转换" class="headerlink" title="jQuery对象与DOM对象之间的转换"></a>jQuery对象与DOM对象之间的转换</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    // 1.DOM对象转换为 jQuery 对象</span><br><span class="line">    // （1）我们直接获取视频，得到就是jQuery对象</span><br><span class="line">    $(&#x27;video&#x27;);</span><br><span class="line">    // (2)我们已经使用原生js获取过来的 DOM对象</span><br><span class="line">    var myvideo = document.querySelector(&#x27;video&#x27;);</span><br><span class="line">    // $(myvideo).play(); jQuery里面没有play这个方法</span><br><span class="line">    // 2. jQuery对象转换为DOM对象</span><br><span class="line">    // myvideo.play();</span><br><span class="line">    // $(&#x27;video&#x27;)[0].play();    //可使用索引，也可以用get(如下)</span><br><span class="line">    $(&#x27;video&#x27;).get(0).play();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="jQuery设置样式-隐式迭代"><a href="#jQuery设置样式-隐式迭代" class="headerlink" title="jQuery设置样式(隐式迭代)"></a>jQuery设置样式(隐式迭代)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div&gt;惊喜不，意外不&lt;/div&gt;</span><br><span class="line">    &lt;div&gt;惊喜不，意外不&lt;/div&gt;</span><br><span class="line">    &lt;div&gt;惊喜不，意外不&lt;/div&gt;</span><br><span class="line">    &lt;div&gt;惊喜不，意外不&lt;/div&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li&gt;相同的操作&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;相同的操作&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;相同的操作&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        // 1.获取四个div元素</span><br><span class="line">        console.log($(&quot;div&quot;));</span><br><span class="line"></span><br><span class="line">        // 2.给四个div设置背景颜色为粉色</span><br><span class="line">        $(&quot;div&quot;).css(&quot;background&quot;,&quot;pink&quot;);</span><br><span class="line">        // 3.隐式迭代就是把匹配的所有元素内部进行遍历循环，给每一个元素添加css这个方法</span><br><span class="line">        $(&quot;ul li&quot;).css(&quot;color&quot;,&quot;red&quot;);</span><br><span class="line">    &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="筛选选择器"><a href="#筛选选择器" class="headerlink" title="筛选选择器"></a>筛选选择器</h3><p><img src="https://s1.vika.cn/space/2022/10/23/1fb30232dab74da48ea088348c254772"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;Li&gt;多个里面筛选几个&lt;/Li&gt;</span><br><span class="line">        &lt;Li&gt;多个里面筛选几个&lt;/Li&gt;</span><br><span class="line">        &lt;Li&gt;多个里面筛选几个&lt;/Li&gt;</span><br><span class="line">        &lt;Li&gt;多个里面筛选几个&lt;/Li&gt;</span><br><span class="line">        &lt;Li&gt;多个里面筛选几个&lt;/Li&gt;</span><br><span class="line">        &lt;Li&gt;多个里面筛选几个&lt;/Li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;ol&gt;</span><br><span class="line">        &lt;li&gt;多个里面筛选几个&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;多个里面筛选几个&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;多个里面筛选几个&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;多个里面筛选几个&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;多个里面筛选几个&lt;/li&gt;</span><br><span class="line">        &lt;li&gt;多个里面筛选几个&lt;/li&gt;</span><br><span class="line">    &lt;/ol&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        $(function() &#123;</span><br><span class="line">            $(&quot;ul li:first&quot;).css(&quot;color&quot;,&quot;red&quot;);</span><br><span class="line">            $(&quot;ul li:eq(2)&quot;).css(&quot;color&quot;,&quot;blue&quot;);</span><br><span class="line">            $(&quot;ol li:odd&quot;).css(&quot;color&quot;,&quot;skyblue&quot;);</span><br><span class="line">            $(&quot;ol li:even&quot;).css(&quot;color&quot;,&quot;pink&quot;);</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="筛选方法"><a href="#筛选方法" class="headerlink" title="筛选方法"></a>筛选方法</h3><p><img src="https://s1.vika.cn/space/2022/10/23/e5ee81b4edb049b0a6da0d9e45b6f3a6"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://example.com">总铭于心</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/post/4131456d.html">http://example.com/post/4131456d.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg2.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/post/8184b49b.html"><img class="next-cover" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">JS学习笔记</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">总铭于心</div><div class="author-info__description">欢迎访问</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/linjmblog"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/linjmblog" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="as fa-envelope"></i></a><a class="social-icon" href="https://fontawesome.com/icons/user?s=solid&amp;f=sharp" target="_blank" title="ͼ��"><i class="fa-sharp fa-solid fa-user"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">基本使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery%E5%AF%B9%E8%B1%A1%E4%B8%8EDOM%E5%AF%B9%E8%B1%A1%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.</span> <span class="toc-text">jQuery对象与DOM对象之间的转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery%E8%AE%BE%E7%BD%AE%E6%A0%B7%E5%BC%8F-%E9%9A%90%E5%BC%8F%E8%BF%AD%E4%BB%A3"><span class="toc-number">3.</span> <span class="toc-text">jQuery设置样式(隐式迭代)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AD%9B%E9%80%89%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text">筛选选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AD%9B%E9%80%89%E6%96%B9%E6%B3%95"><span class="toc-number">5.</span> <span class="toc-text">筛选方法</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/4131456d.html" title="jQuery笔记">jQuery笔记</a><time datetime="2022-10-24T02:56:04.000Z" title="Created 2022-10-24 10:56:04">2022-10-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/8184b49b.html" title="JS学习笔记">JS学习笔记</a><time datetime="2022-10-24T02:53:34.000Z" title="Created 2022-10-24 10:53:34">2022-10-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/11344a7a.html" title="语言理解与表达">语言理解与表达</a><time datetime="2022-10-22T13:42:15.000Z" title="Created 2022-10-22 21:42:15">2022-10-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/f96b233.html" title="Markdown常用标记">Markdown常用标记</a><time datetime="2022-10-15T04:57:26.000Z" title="Created 2022-10-15 12:57:26">2022-10-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/c7e943bf.html" title="搭建博客所遇到的问题">搭建博客所遇到的问题</a><time datetime="2022-10-15T02:49:58.000Z" title="Created 2022-10-15 10:49:58">2022-10-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 总铭于心</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html><html lang="zh-Hans" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>JS学习笔记 | 总铭博客</title><meta name="keywords" content="播客"><meta name="author" content="总铭于心"><meta name="copyright" content="总铭于心"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="6.DOM操作主要针对于元素的操作。主要有创建、增、删、改、查、属性操作、事件操作  6.1创建  document.write innerHTML createElement   6.2增  appendChild insertBefore   6.3删  removeChild   6.4改主要修改元素属性（内容、属性、表单值等）  修改元素属性：src、href、title等 1234567">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS学习笔记">
+<meta property="og:url" content="http://example.com/post/8184b49b.html">
+<meta property="og:site_name" content="总铭博客">
+<meta property="og:description" content="6.DOM操作主要针对于元素的操作。主要有创建、增、删、改、查、属性操作、事件操作  6.1创建  document.write innerHTML createElement   6.2增  appendChild insertBefore   6.3删  removeChild   6.4改主要修改元素属性（内容、属性、表单值等）  修改元素属性：src、href、title等 1234567">
+<meta property="og:locale">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png">
+<meta property="article:published_time" content="2022-10-24T02:53:34.000Z">
+<meta property="article:modified_time" content="2022-10-24T02:54:26.953Z">
+<meta property="article:author" content="总铭于心">
+<meta property="article:tag" content="播客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/post/8184b49b"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'JS学习笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-10-24 10:54:26'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">总铭博客</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">JS学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-10-24T02:53:34.000Z" title="Created 2022-10-24 10:53:34">2022-10-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-10-24T02:54:26.953Z" title="Updated 2022-10-24 10:54:26">2022-10-24</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="JS学习笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="6-DOM操作"><a href="#6-DOM操作" class="headerlink" title="6.DOM操作"></a>6.DOM操作</h2><p>主要针对于元素的操作。主要有创建、增、删、改、查、属性操作、事件操作</p>
+<hr>
+<p>6.1创建</p>
+<ol>
+<li>document.write</li>
+<li>innerHTML</li>
+<li>createElement</li>
+</ol>
+<hr>
+<p>6.2增</p>
+<ol>
+<li>appendChild</li>
+<li>insertBefore</li>
+</ol>
+<hr>
+<p>6.3删</p>
+<ol>
+<li>removeChild</li>
+</ol>
+<hr>
+<p>6.4改<br>主要修改元素属性（内容、属性、表单值等）</p>
+<ol>
+<li><p>修改元素属性：src、href、title等</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">时间问候案例:</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;img src=&quot;../images/s.gif&quot; alt=&quot;&quot;&gt;</span><br><span class="line">    &lt;div&gt;上午好&lt;/div&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        // 根据系统不同时间来判断，所以需要用到日期内置对象</span><br><span class="line">        // 利用多分支语句来设置不同的图片</span><br><span class="line">        // 需要一个图片，并且根据时间修改图片，就需要用到操作元素src属性</span><br><span class="line">        // 需要一个div元素，显示不同问候语，修改元素内容即可</span><br><span class="line">        // 1.获取元素</span><br><span class="line">        var img = document.querySelector(&#x27;img&#x27;);</span><br><span class="line">        var div = document.querySelector(&#x27;div&#x27;);</span><br><span class="line">        // 2.得到当前的小时数</span><br><span class="line">        var date = new Date();</span><br><span class="line">        var h = date.getHours();</span><br><span class="line">        // 3.判断小时数改变图片和文字信息</span><br><span class="line">        if (h&lt;12) &#123;</span><br><span class="line">            img.src = &#x27;../images/s.gif&#x27;;</span><br><span class="line">            div.innerHTML = &#x27;亲,上午好&#x27;;</span><br><span class="line">        &#125; else if (h&lt;18) &#123;</span><br><span class="line">            img.src = &#x27;../images/x.gif&#x27;;</span><br><span class="line">            div.innerHTML = &#x27;亲,下午好&#x27;;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            img.src = &#x27;../images/w.gif&#x27;;</span><br><span class="line">            div.innerHTML = &#x27;亲,晚上好&#x27;;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改普通元素内容：innerHTML、innerText</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div&gt;&lt;/div&gt;</span><br><span class="line">    &lt;p&gt;</span><br><span class="line">        我是文字</span><br><span class="line">        &lt;span&gt;123&lt;/span&gt;</span><br><span class="line">    &lt;/p&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        // innerText 和 innerHTML 的区别</span><br><span class="line">        // 1. innerText 不识别html标签 非标准 去除空格和换行</span><br><span class="line">        var div = document.querySelector(&#x27;div&#x27;);</span><br><span class="line">        // div.innerText = &#x27;&lt;strong&gt;今天是: &lt;/strong&gt; 2019&#x27;;</span><br><span class="line">        // 2. innerHTML 识别html标签 W3C标准 保留空格和换行的</span><br><span class="line">        div.innerHTML = &#x27;&lt;strong&gt;今天是: &lt;/strong&gt; 2019&#x27;;</span><br><span class="line">        // 这两个属性是可读写的 可以获取元素里面的内容</span><br><span class="line">        var p = document.querySelector(&#x27;p&#x27;);</span><br><span class="line">        console.log(p.innerText);</span><br><span class="line">        console.log(p.innerHTML);</span><br><span class="line">    &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改表单元素：value、type、disabled等</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;button&gt;按钮&lt;/button&gt;</span><br><span class="line">    &lt;input type=&quot;text&quot; value=&quot;输入内容&quot;&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        // 1.获取元素</span><br><span class="line">        var btn = document.querySelector(&#x27;button&#x27;);</span><br><span class="line">        var input = document.querySelector(&#x27;input&#x27;);</span><br><span class="line">        // 2.注册事件 处理程序</span><br><span class="line">        btn.onclick = function() &#123;</span><br><span class="line">            // input.innerHTML = &#x27;点击了&#x27;; 这个是普通盒子比如div标签里面的内容</span><br><span class="line">            // 表单里面的值 文字内容是通过 value 来修改的</span><br><span class="line">            input.value = &#x27;被点击了&#x27;;</span><br><span class="line">            // 如果想要某个表单被禁用 不能再点击 disabled 我们想要这个按钮 button 禁用</span><br><span class="line">            // btn.disabled = true;</span><br><span class="line">            this.disabled = true;   //this 指向的是事件函数的调用者 btn</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">```   </span><br><span class="line"></span><br><span class="line">4. 修改元素样式：style、className</span><br></pre></td></tr></table></figure>
+<p>一、通过style修改</p>
+ <style>
+     div {
+         width: 200px;
+         height: 200px;
+         background-color: pink;
+     }
+ </style>
+
+<body>
+ <div></div>
+ <script>
+     // 1. 获取元素
+     var div = document.querySelector('div');
+     // 2. 注册事件 处理程序
+     div.onclick = function() {
+         // div.style里面的属性 采取驼峰命名法
+         // js修改后产生的是行内样式，比内嵌样式权重高，故能覆盖掉原先样式
+         this.style.backgroundColor = 'purple';
+         this.style.width = '250px'
+     }
+ </script></body></li>
+</ol>
+<p>二、通过className修改<br>    <style><br>        div {<br>            width: 100px;<br>            height: 100px;<br>            background-color: pink;<br>        }</p>
+<pre><code>    .change &#123;
+        background-color: purple;
+        color: #fff;
+        font-size: 25px;
+        margin-top: 100px;
+    &#125;
+&lt;/style&gt;
+</code></pre>
+</head>
+<body>
+    <div class="first">文本</div>
+    <script>
+        // 1.使用 element.style 获得修改元素样式 一般在样式比较少或者功能简单的情况下使用
+        var test = document.querySelector('div');
+        // 2.使用className更换 适合于样式多或复杂的情况 会直接改掉原来类名，需谨慎使用
+
+<pre><code>    test.onclick = function() &#123;
+        // this.className = &#39;change&#39;;
+        this.className = &#39;first change&#39;; //如果想要保留原先的类名 我们可以这么做 多类名选择器
+    &#125;
+&lt;/script&gt;
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">---</span><br><span class="line">6.5查</span><br><span class="line">主要获取查询dom的元素</span><br><span class="line">1. DOM提供的API方法：getElementById、getElementsByTagName 古老用法不太推荐</span><br></pre></td></tr></table></figure>
+<body>
+    <div id="time">2019-9-9</div>
+    <script>
+        // 1.因为我们文档页面从上往下加载，所以先得有标签，所以我们script写到标签的下面
+        // 2.get 获得 element 元素 by 通过 驼峰命名法
+        // 3，参数id 是大小写敏感的字符串
+        // 4.返回的是一个元素对象
+        var timer = document.getElementById('time');
+        console.log(timer);
+        console.log(typeof timer);
+        // 5.console.dir 打印我们返回的元素对象 更好的查看里面的属性和方法
+        console.dir(timer);
+    </script>
+</body>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. H5提供的新方法：querySelector、querySelectorAll 提倡</span><br></pre></td></tr></table></figure>
+<body>
+    <div class="box">盒子</div>
+    <div class="box">盒子</div>
+    <div id="nav">
+        <ul>
+            <li>首页</li>
+            <li>产品</li>
+        </ul>
+    </div>
+    <script>
+        // 1. getElementByClassName 根据类名获得某些元素集合
+        var boxs = document.getElementsByClassName('box');
+        console.log(boxs);
+        // 2. querySelector 返回指定选择器的第一个元素对象 切记 里面的选择器需要加符号 .box #nav 
+        var firstBox = document.querySelector('.box');
+        console.log(firstBox);
+        var nav = document.querySelector('#nav');
+        console.log(nav);
+        var li = document.querySelector('li');
+        console.log(li);
+        // 3. querySelectorAll()返回指定选择器的所有元素对象集合
+        var allBox = document.querySelectorAll('.box');
+        console.log(allBox);
+        var lis = document.querySelectorAll('li');
+        console.log(lis);
+    </script>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">3. 利用节点操作获取元素：父（parentNode）、子（children）、兄（previousElementsibling、nextElementSibling） 提倡</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line">### 6.7事件操作</span><br><span class="line">给元素注册事件，采取事件源、事件类型=事件处理程序</span><br><span class="line">|鼠标事件|触发条件|</span><br><span class="line">|---|---|</span><br><span class="line">|onclick|鼠标点击左键触发|</span><br><span class="line">|onmouseover|鼠标经过触发|</span><br><span class="line">|onmouseout|鼠标离开触发|</span><br><span class="line">|onfocus|获得鼠标焦点触发|</span><br><span class="line">|onblur|失去鼠标焦点触发|</span><br><span class="line">|onmousemove|鼠标移动触发|</span><br><span class="line">|onmouseup|鼠标弹起触发|</span><br><span class="line">|onmousedown|鼠标按下触发|</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<body>
+    <div>123</div>
+    <script>
+        // 执行事件步骤
+        // 点击div 控制台输出 我被选中了
+        // 1. 获取事件源
+        var div = document.querySelector('div');
+        // 2. 绑定事件/注册事件
+        // div.onclick
+        // 3.添加事件处理程序
+        div.onclick = function() {
+            console.log('我被选中了');
+        }
+    </script>
+</body>
+```
+
+</style></p></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://example.com">总铭于心</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/post/8184b49b.html">http://example.com/post/8184b49b.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/post/4131456d.html"><img class="prev-cover" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg2.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">jQuery笔记</div></div></a></div><div class="next-post pull-right"><a href="/post/11344a7a.html"><img class="next-cover" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">语言理解与表达</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">总铭于心</div><div class="author-info__description">欢迎访问</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/linjmblog"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/linjmblog" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="as fa-envelope"></i></a><a class="social-icon" href="https://fontawesome.com/icons/user?s=solid&amp;f=sharp" target="_blank" title="ͼ��"><i class="fa-sharp fa-solid fa-user"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-DOM%E6%93%8D%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text">6.DOM操作</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/4131456d.html" title="jQuery笔记">jQuery笔记</a><time datetime="2022-10-24T02:56:04.000Z" title="Created 2022-10-24 10:56:04">2022-10-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/8184b49b.html" title="JS学习笔记">JS学习笔记</a><time datetime="2022-10-24T02:53:34.000Z" title="Created 2022-10-24 10:53:34">2022-10-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/11344a7a.html" title="语言理解与表达">语言理解与表达</a><time datetime="2022-10-22T13:42:15.000Z" title="Created 2022-10-22 21:42:15">2022-10-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/f96b233.html" title="Markdown常用标记">Markdown常用标记</a><time datetime="2022-10-15T04:57:26.000Z" title="Created 2022-10-15 12:57:26">2022-10-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/c7e943bf.html" title="搭建博客所遇到的问题">搭建博客所遇到的问题</a><time datetime="2022-10-15T02:49:58.000Z" title="Created 2022-10-15 10:49:58">2022-10-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 总铭于心</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
